@@ -7,12 +7,12 @@ namespace Discount.API.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class CouponController : ControllerBase
+    public class DiscountController : ControllerBase
     {
         private readonly IDiscountRepository _repository;
-        private readonly ILogger<CouponController> _logger;
+        private readonly ILogger<DiscountController> _logger;
 
-        public CouponController(IDiscountRepository repository, ILogger<CouponController> logger)
+        public DiscountController(IDiscountRepository repository, ILogger<DiscountController> logger)
         {
             _repository = repository;
             _logger = logger;

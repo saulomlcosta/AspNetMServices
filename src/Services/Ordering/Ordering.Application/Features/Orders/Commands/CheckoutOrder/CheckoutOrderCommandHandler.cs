@@ -6,7 +6,7 @@ using Ordering.Application.Contracts.Persistence;
 using Ordering.Application.Models;
 using Ordering.Domain.Entities;
 
-namespace Ordering.Application.Features.Orders.Commands
+namespace Ordering.Application.Features.Orders.Commands.CheckoutOrder
 {
     public class CheckoutOrderCommandHandler : IRequestHandler<CheckoutOrderCommand, int>
     {
@@ -23,7 +23,7 @@ namespace Ordering.Application.Features.Orders.Commands
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
-        public async Task<int> Handle(CheckoutOrderCommand request, 
+        public async Task<int> Handle(CheckoutOrderCommand request,
             CancellationToken cancellationToken)
         {
             var orderEntity = _mapper.Map<Order>(request);

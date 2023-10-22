@@ -1,5 +1,4 @@
 using EventBus.Messages.Common;
-using EventBus.Messages.Events;
 using MassTransit;
 using Ordering.API.EventBusConsumer;
 using Ordering.API.Extensions;
